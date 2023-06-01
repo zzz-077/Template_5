@@ -1,0 +1,998 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    transition: all 0.7s;
+    font-family: Oswald, sans-serif;
+}
+h1,
+h2,
+h3 {
+    font-family: Oswald, sans-serif;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: Oswald, sans-serif;
+}
+
+button {
+    cursor: pointer;
+    font-family: Oswald, sans-serif;
+}
+
+/*--------------major-classes--------------*/
+.center {
+    text-align: center;
+    align-items: center;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.content {
+    padding: 0 16px;
+}
+
+/*--------------navbar-section--------------*/
+.navbar {
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 20px 0;
+    width: 100%;
+    z-index: 10;
+}
+.title {
+    font-size: 1.8rem;
+    color: rgba(43, 43, 43, 0.491);
+}
+
+.inside-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar i {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.openmenu i {
+    color: black;
+}
+
+.menu ul {
+    align-items: center;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    margin-top: 80px;
+}
+.sidenav {
+    display: block;
+    padding: 0 100px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    height: 100vh;
+    color: white;
+    z-index: 100;
+    justify-content: center;
+    transition: all 0.7s;
+    font-family: Oswald, sans-serif;
+    transform: translateX(-400px);
+}
+.sidenav.active {
+    transform: translateX(0);
+}
+.sidenav.activewdth {
+    transform: translateX(0);
+    width: 100%;
+}
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+.menu ul li {
+    padding: 10px 12px;
+    list-style: none;
+    margin: 10px 0;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+.closemenu i {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+.closemenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 10px 0;
+}
+/*--------------main-section--------------*/
+
+.main-container {
+    position: relative;
+    background: url(img/mainimg.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main-container::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.551);
+}
+.main-box {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main-box h1 {
+    font-size: 3.2rem;
+    color: white;
+    font-weight: 900;
+}
+.main-box h3 {
+    width: 70%;
+    flex-wrap: wrap;
+    font-size: 16px;
+    color: white;
+
+    line-height: 28px;
+    letter-spacing: 2px;
+    margin: 0 auto;
+}
+.main-box button {
+    margin: 40px 16px 0 16px;
+    border: none;
+    background-color: #1a1a1a00;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 16px 26px;
+}
+.main-box .mainBtn1 {
+    background-color: #f1900e;
+    border-radius: 50vw;
+    transition: all 0.7s;
+}
+.main-box .mainBtn1:hover {
+    background-color: rgba(241, 143, 14, 0.77);
+}
+.main-box .mainBtn2 {
+    border: 2px solid white;
+    border-radius: 50vw;
+    transition: all 0.7s;
+}
+.main-box .mainBtn2:hover {
+    background-color: white;
+    color: black;
+}
+.main-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.main-icons img {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+.main-icons p {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-top: 16px;
+}
+
+/*--------------discover-section--------------*/
+.discover-box {
+    width: 100%;
+}
+
+.discoverCards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.discoverCards-container div {
+    width: 30%;
+    margin: 10px;
+    transition: all 0.7s;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.397);
+}
+
+.discover-box h1 {
+    color: black;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+.discoverCards-container div:hover {
+    box-shadow: 6px 6px 23px 10px rgba(0, 0, 0, 0.493);
+}
+.discoverCards-container div h2 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 24px;
+    background-color: #1a1a1a;
+}
+.discoverCards-container div img {
+    width: 100%;
+    height: 25vh;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+.discoverCards-container div p {
+    margin: 16px 12px 4px 12px;
+    line-height: 22px;
+    color: black;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.discoverCards-container div button {
+    border: none;
+    border-bottom: #f1900e 2px solid;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 800;
+    margin: 20px 0;
+    transition: all 0.3s;
+}
+.discoverCards-container div button:hover {
+    color: #f1900e;
+}
+.dc-card1 p,
+.dc-card3 p {
+    padding: 0 5px;
+}
+.middletext {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    color: #5f5c5c;
+    font-style: italic;
+    font-size: 17px;
+    font-weight: 500;
+}
+.middletext a {
+    color: #2d2d2d;
+}
+.middletext a:hover {
+    color: #5f5c5cbd;
+}
+/*--------------getactive-section--------------*/
+.ga-container {
+    width: 100%;
+    background-color: #ffffff;
+    justify-content: center;
+    padding: 10px 0 40px 0;
+    display: block;
+}
+.ga-row {
+    max-width: 1040px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 16px;
+}
+.ga-row h1 {
+    margin-bottom: 40px;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+.ga-disp-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+.ga-box1 {
+    width: 50%;
+    position: relative;
+    height: 65vh;
+}
+.ga-box1 img {
+    position: absolute;
+    object-fit: cover;
+}
+.ga-img1 {
+    position: absolute;
+    left: 0;
+    width: 75%;
+    height: 45vh;
+}
+.ga-img2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 72%;
+    height: 32vh;
+}
+
+.ga-box2 {
+    position: relative;
+    text-align: justify;
+    width: 50%;
+    justify-content: center;
+}
+.ga-box2 h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.ga-box2 p {
+    line-height: 26px;
+    margin: 10px 80px 10px 0;
+}
+/*--------------popular clases-section--------------*/
+.pop-section {
+    width: 100%;
+}
+.pop-img h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    display: flex;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 40px;
+}
+.pop-img {
+    width: 100%;
+    height: 42vh;
+}
+.pop-img img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+.pop-img img::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000e4;
+}
+.pop-cards {
+    position: relative;
+    top: -180px;
+    display: flex;
+    gap: 20px;
+    z-index: 20;
+    font-family: "Unbounded", cursive;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.pop-cards div {
+    padding: 30px 16px;
+    background-color: white;
+    text-align: left;
+    transition: all 0.7s;
+    width: 220px;
+}
+.pop-cards div:hover {
+    box-shadow: 6px 6px 23px 10px rgba(0, 0, 0, 0.493);
+    border-bottom: #f1900e 3px solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10 px;
+}
+.pop-cards div h2 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.pop-cards div p {
+    margin-top: 18px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.pop-cards div button {
+    border: none;
+    border-bottom: #f1900e 2px solid;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 1000;
+    margin: 20px 0 0 0;
+    transition: all 0.3s;
+    font-family: Oswald, sans-serif;
+}
+.pop-cards div button:hover {
+    color: #f1900e;
+}
+.pop-cards div span {
+    display: flex;
+    width: 98px;
+    height: 98px;
+    padding: 20px;
+    margin: 0 auto 0 0;
+    background-color: rgba(241, 143, 14, 0.847);
+
+    align-items: center;
+    justify-content: center;
+    border-radius: 50vh;
+}
+.pop-cards div span img {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+/*--------------weight loss-section--------------*/
+.wl-container {
+    display: flex;
+    justify-content: space-between;
+}
+.wl-box1 {
+    text-align: center;
+    width: 40%;
+    padding: 16px;
+}
+.wl-box1 h1 {
+    width: 100%;
+    justify-content: center;
+    font-size: 3.2rem;
+}
+.wl-box1 h3 {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.wl-box1 button {
+    font-size: 18px;
+    color: white;
+    padding: 18px 30px;
+    margin: 20px 40px 0 40px;
+    font-weight: 700;
+    background-color: #f1900e;
+    border: none;
+    border-radius: 50em;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+.wl-box1 button:hover {
+    background-color: rgba(241, 143, 14, 0.614);
+}
+.wl-box2 {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+.wl-box2 img {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    top: 5px;
+}
+/*--------------trainers-section--------------*/
+.ourt-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #e5e5e5;
+}
+.ourt-container {
+    display: flex;
+}
+.ourt-box1 {
+    padding: 16px;
+    width: 50%;
+    text-align: left;
+}
+
+.ourt-box1 h1 {
+    font-size: 3.2rem;
+}
+.ourt-box1 p {
+    margin: 48px 0;
+    /* padding-right: 34px; */
+    text-align: left;
+    line-height: 26px;
+}
+.ourt-box1 button {
+    font-size: 18px;
+    color: white;
+    padding: 18px 30px;
+
+    font-weight: 700;
+    background-color: #f1900e;
+    border: none;
+    border-radius: 50em;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+.ourt-box1 button:hover {
+    background-color: rgba(241, 143, 14, 0.614);
+}
+.ourt-box2 {
+    width: 60%;
+    height: 100%;
+    margin-left: 40px;
+}
+.ourt-box2 img {
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 49%;
+    height: 32vh;
+    padding: 3px;
+}
+/*--------------sign up-section--------------*/
+.signup-container {
+    display: flex;
+    margin-top: 180px;
+    justify-content: space-between;
+}
+.signup-box1 {
+    padding: 16px;
+
+    text-align: left;
+    width: 45%;
+}
+.signup-box2 {
+    text-align: left;
+    padding: 16px;
+}
+.signup-box2 h1 {
+    font-size: 3.2rem;
+}
+.signup-box2 p {
+    color: #5f5c5c;
+    font-style: italic;
+    font-size: 17px;
+    font-weight: 500;
+}
+.signup-box2 p a {
+    color: #121111;
+    font-family: Oswald, sans-serif;
+}
+.signup-box2 p a:hover {
+    color: #928f8fdb;
+}
+.phonenumber-box {
+    display: flex;
+    margin-top: 40px;
+
+    align-items: center;
+}
+.phonenumber-box i {
+    font-size: 26px;
+    color: #f1900e;
+    margin-right: 8px;
+}
+.phonenumber-box a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.phonenumber-box a:hover {
+    text-decoration: underline;
+    color: #f1900e;
+}
+.signup-box1 h2 {
+    font-size: 1.6rem;
+}
+.signup-box1 p {
+    line-height: 24px;
+}
+.email-box {
+    margin-top: 40px;
+    display: flex;
+}
+.email-box input {
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding: 12px 12px 12px 16px;
+    width: 100%;
+    background-color: #dcd9d9db;
+    border: none;
+    outline: none;
+    border-radius: 15vw;
+    margin-right: 10px;
+}
+.email-box button {
+    font-size: 16px;
+    padding: 12px 16px;
+    font-weight: 700;
+    background-color: #f1900e;
+    color: white;
+    border: none;
+    border-radius: 50em;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+
+.email-box button:hover {
+    background-color: rgba(241, 143, 14, 0.614);
+}
+/*--------------have STsay-section--------------*/
+.stsay-container {
+    margin-top: 120px;
+}
+.stsay-container h1 {
+    font-size: 3.2rem;
+}
+.stsay-mainbox {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 20px;
+    background-color: #e5e5e5;
+}
+.stsay-box1 {
+    display: block;
+
+    width: 52%;
+    text-align: left;
+    color: #808080;
+    padding: 40px 10px;
+}
+.stsay-box1 i {
+    color: black;
+}
+.stsay-box1-links {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    font-size: 28px;
+}
+.stsay-box1 p {
+    margin-top: 60px;
+    line-height: 26px;
+    font-size: 20px;
+}
+.stsay-box2 {
+    text-align: left;
+    padding: 40px 10px;
+}
+
+.stsay-box2 input {
+    font: inherit;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px 8px;
+    border: none;
+    outline: none;
+    background-color: #e5e5e500;
+    border-bottom: 2px solid black;
+    width: 100%;
+    font-family: Oswald, sans-serif;
+}
+.stsay-box2-PE-inputs {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+.stsay-box2 button {
+    padding: 10px;
+    width: 100%;
+    border-radius: 20vw;
+    border: none;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+    background-color: #f1900e;
+    transition: all 0.5s;
+}
+.stsay-box2 button:hover {
+    background-color: rgba(241, 143, 14, 0.614);
+}
+/*--------------footer-section--------------*/
+.footer-container {
+    margin-top: 80px;
+    width: 100%;
+    padding: 20px;
+    background-color: #1a1a1ad4;
+}
+.footer-mainbox p {
+    font-size: 14px;
+    color: rgba(242, 240, 240, 0.923);
+    margin: 40px 0;
+}
+.footer-mainbox p a {
+    font-style: italic;
+    color: rgb(99, 144, 212);
+}
+.footer-mainbox p a:hover {
+    color: rgb(68, 126, 214);
+}
+/*--------------scrolleffect-section--------------*/
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(3px);
+    transition: all 1.5s;
+    overflow: hidden;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+    transition: all 1.5s;
+}
+
+.child1:nth-child(1),
+.child1:nth-child(2),
+.child1:nth-child(3) {
+    transition-delay: 1ms;
+}
+.hidden2 {
+    opacity: 0;
+    transform: translateY(100%);
+    filter: blur(3px);
+    transition: all 1.5s;
+    overflow: hidden;
+}
+.show2 {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition: all 1.5s;
+}
+/*--------------mediaquery-section--------------*/
+@media (max-width: 500px) {
+    .main-box h1 {
+        font-size: 8vw;
+    }
+    .main-box h3 {
+        font-size: 4vw;
+        width: 100%;
+    }
+    .main-icons {
+        margin: 0 auto;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .openmenu i {
+        font-size: 1.5rem;
+    }
+
+    .ourt-box1 h1 {
+        font-size: 2.4rem;
+    }
+    .ourt-box1 p {
+        width: 100%;
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .ourt-box1 button {
+        font-size: 12px;
+    }
+}
+@media (max-width: 993px) {
+    .discover-box {
+        top: 190px;
+    }
+    .discoverCards-container div {
+        width: 45%;
+    }
+    .ga-disp-boxes {
+        display: block;
+        justify-content: center;
+    }
+
+    .ga-row h1 {
+        font-size: 2.4rem;
+    }
+    .ga-box1 {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+    }
+    .ga-box2 {
+        display: block;
+        margin: 10px auto;
+        align-items: center;
+        width: 80%;
+    }
+
+    .ga-box2 p {
+        padding-right: 20px;
+    }
+
+    .ga-box2 h2 {
+        font-size: 5vw;
+    }
+    .pop-cards div {
+        width: 340px;
+        height: 340px;
+    }
+    .wl-container {
+        display: block;
+        width: 100%;
+        justify-content: center;
+    }
+    .wl-box1 {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .wl-box1 h1 {
+        font-size: 2.4rem;
+    }
+    .wl-box1 h3 {
+        font-size: 1rem;
+    }
+    .wl-box1 button {
+        font-size: 16px;
+    }
+    .wl-box2 {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .wl-box2 img {
+        height: 80vh;
+        left: -40px;
+    }
+    .ourt-container {
+        display: block;
+    }
+    .ourt-box1 {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .ourt-box2 {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .signup-container {
+        display: block;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .signup-box2 {
+        width: 80%;
+        justify-content: center;
+        margin: 40px auto 0 auto;
+    }
+    .signup-box1 {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .signup-box1 p {
+        font-size: 16px;
+    }
+    .signup-box2 h1 {
+        font-size: 2.4rem;
+    }
+    .email-box input {
+        width: 60%;
+        font-size: 14px;
+        padding: 8px 8px 8px 12px;
+    }
+    .email-box button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .stsay-mainbox {
+        display: block;
+    }
+    .stsay-box1 {
+        margin: 0 auto;
+        width: 80%;
+        justify-content: center;
+    }
+    .stsay-box2 {
+        margin: 0 auto;
+        width: 80%;
+        justify-content: center;
+    }
+}
+@media (max-width: 760px) {
+    .main-box h1 {
+        font-size: 1.8rem;
+    }
+    .main-box h3 {
+        margin-top: 10px;
+        font-size: 3vw;
+
+        line-height: 18px;
+        letter-spacing: 0;
+    }
+    .main-icons {
+        margin-top: 20px;
+    }
+    .main-box button {
+        font-size: 12px;
+        padding: 10px 16px;
+    }
+    .pop-img h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 2.8rem;
+    }
+    .email-box {
+        width: 100%;
+        display: block;
+    }
+    .email-box input {
+        width: 100%;
+    }
+    .email-box button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 585px) {
+    .discoverCards-container div {
+        width: 75%;
+    }
+    .discover-box h1 {
+        font-size: 7.5vw;
+    }
+    .discoverCards-container div h2 {
+        font-size: 6.5vw;
+    }
+    .discoverCards-container div p {
+        font-size: 3.5vw;
+    }
+
+    .wl-box1 h3 {
+        font-size: 1rem;
+    }
+    .wl-box1 button {
+        font-size: 12px;
+    }
+    .wl-box2 img {
+        height: 50vh;
+    }
+    .column1 p,
+    .column2 p,
+    .column3 p {
+        margin-right: 0;
+    }
+}
